@@ -15,13 +15,17 @@ function [] = main()
     SA = [3032, 2666, 2502, 3751, 4834, 5384, 5602, 6096, 5761, 5863, 7329, 8007, 7501, 6829, 6428];
     Spain = [14667, 15324, 17020, 21496, 24919, 26511, 28483, 32709, 35579, 32334, 30737, 31835, 28564, 29212, 29212];
     EUA = [36335, 37133, 38023, 39496, 41713, 44115, 46299, 47976, 48383, 47100, 48467, 49883, 51603, 53107, 55033];
-    
-    
+
+    %Promedio de los años 
+    Datos2001 = [Australia(1), Brazil(1), Canada(1), Chile(1), Indonesia(1), Japan(1), Mexico(1), SA(1), Spain(1), EUA(1)];
+    Prom2001 = mean(Datos2001);
+
+
     disp("Análisis del “GDP per capita - current US $ 2000 - 2015 ” para 10 países/ciudades");
     disp("Paises: Australia, Brazil, Canada, Chile, Indonesia, Japan, Mexico, Sudafrica, Spain, EUA")
     disp("a. Selecciona un País");
     disp("b. Max, Min y Prom de País");
-    disp("c. ");
+    disp("c. Promedio de año de todos los paises");
     disp("d. ");
     disp("e. ");
     disp("f. ");
@@ -61,7 +65,7 @@ function [] = main()
                 elseif(strcmp(tmp, 'EUA'))
                     aux = EUA;
                 end
-                
+                % Funciones de Matlab para promedio, máximo y mínimo
                 Prom = mean(aux);
                 Min = min(aux);
                 Max = max(aux);
@@ -72,7 +76,7 @@ function [] = main()
                 disp("El menor valor es: ")
                 disp(Min);
             case 'c'
-                disp('Caso C');
+
             case 'd'
                 disp('Caso D');
             case 'e'
@@ -88,7 +92,7 @@ function [] = main()
             disp("Paises: Australia, Brazil, Canada, Chile, Indonesia, Japan, Mexico, Sudafrica, Spain, EUA")
             disp("a. Selecciona un país");
             disp("b. Max, Min y Prom de País");
-            disp("c. ");
+            disp("c. Promedio de año de todos los paises");
             disp("d. ");
             disp("e. ");
             disp("f. ");        
