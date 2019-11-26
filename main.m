@@ -8,6 +8,8 @@ function [] = main()
     Australia = [21679, 19491, 20082, 23447, 30431, 33999, 36045, 40960, 49960, 49602, 42772, 52022, 62518, 68012, 68150];
     Brazil = [3750, 3157, 2829, 3071, 3637, 4790, 5886, 7348, 8831, 8598, 11286, 13246, 12370, 12300, 12113];
     Canada = [24190, 23738, 24169, 28201, 32034, 36266, 40386, 44543, 46594, 40773, 47450, 52102, 52542, 52505, 50836];
+    Chile = [5075, 4575, 4446, 4773, 6195, 7599, 9464, 10502, 10751, 10209, 12808, 14637, 15352, 15843, 14671];
+    Indonesia = [ 780, 748, 900, 1066, 1150, 1263, 1590, 1860, 2167 , 2261, 3122, 3643, 3694, 3624, 3492];
     
     
     disp("Análisis del “GDP per capita - current US $ 2000 - 2015 ” para 10 países/ciudades");
@@ -38,7 +40,12 @@ function [] = main()
                     aux = Brazil;
                 elseif(strcmp(tmp, 'Canada'))
                     aux = Canada;
+                elseif(strcmp(tmp, 'Chile'))
+                    aux = Chile;
+                elseif(strcmp(tmp, 'Indonesia'))
+                    aux = Indonesia;
                 end
+                
                 Prom = mean(aux);
                 Min = min(aux);
                 Max = max(aux);
