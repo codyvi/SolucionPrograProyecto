@@ -1,6 +1,9 @@
 function [] = main()
     
     
+
+    %strcmp compara dos strings si son iguales
+
     %Variables Globales 
 
     Fechas = [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014];
@@ -73,8 +76,6 @@ function [] = main()
                 disp(tmp);
                 input('Presiona enter para continuar', 's')
             case 'b'
-                fileid = fopen('datos.txt', 'r');
-                disp(tmp);
                 disp('El pais es: ')
                 disp(tmp);
                 if(strcmp(tmp, 'Australia'))
@@ -162,33 +163,43 @@ function [] = main()
                 if(strcmp(tmp, 'Australia'))
                     plot(Fechas, Australia)
                     grid on 
+                    legend('Australia');
                 elseif(strcmp(tmp,'Brazil'))
                     plot(Fechas, Brazil)
                     grid on
+                    legend('Brazil');
                 elseif(strcmp(tmp, 'Canada'))
                     plot(Fechas, Canada)
                     grid on
+                    legend('Canada');
                 elseif(strcmp(tmp, 'Chile'))
                     plot(Fechas, Chile)
                     grid on
+                    legend('Chile');
                 elseif(strcmp(tmp, 'Indonesia'))
                     plot(Fechas, Indonesia)
                     grid on
+                    legend('Indonesia');
                 elseif(strcmp(tmp, 'Japan'))
                     plot(Fechas, Japan)
                     grid on
+                    legend('Japan');
                 elseif(strcmp(tmp, 'Mexico'))
                     plot(Fechas, Mexico)
                     grid on
+                    legend('Mexico');
                 elseif(strcmp(tmp,'Sudafrica'))
                     plot(Fechas, SA)
                     grid on
+                    legend('Sudafrica');
                 elseif(strcmp(tmp, 'Spain'))
                     plot(Fechas, Spain)
                     grid on
+                    legend('Spain');
                 elseif(strcmp(tmp, 'EUA'))
                     plot(Fechas, EUA)
                     grid on
+                    legend('EUA');
                 end
                 input('Presiona enter para continuar','s');
             case 'e'
@@ -382,7 +393,7 @@ function [] = main()
                     end
                 end 
 
-                disp('El mayor valor es: ');
+                disp('El menor valor es: ');
                 disp(MinVect);
                 disp('El país es: ')
                 disp(Pais)
