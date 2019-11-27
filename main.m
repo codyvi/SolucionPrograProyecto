@@ -1,7 +1,9 @@
 function [] = main()
     
     
-    
+    %Variables Globales 
+
+    Fechas = [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014];
     
     %Vectores con valores de "GDP per capita - current US $"
     
@@ -159,6 +161,27 @@ function [] = main()
                     input('Presiona enter para continuar', 's');
                 end
             case 'd'
+                if(strcmp(tmp, 'Australia'))
+                    plot(Fechas, Australia)
+                elseif(strcmp(tmp,'Brazil'))
+                    plot(Fechas, Brazil)
+                elseif(strcmp(tmp, 'Canada'))
+                    plot(Fechas, Canada)
+                elseif(strcmp(tmp, 'Chile'))
+                    plot(Fechas, Chile)
+                elseif(strcmp(tmp, 'Indonesia'))
+                    plot(Fechas, Indonesia)
+                elseif(strcmp(tmp, 'Japan'))
+                    plot(Fechas, Japan)
+                elseif(strcmp(tmp, 'Mexico'))
+                    plot(Fechas, Mexico)
+                elseif(strcmp(tmp,'Sudafrica'))
+                    plot(Fechas, SA)
+                elseif(strcmp(tmp, 'Spain'))
+                    plot(Fechas, Spain)
+                elseif(strcmp(tmp, 'EUA'))
+                    plot(Fechas, EUA)
+                end
                 input('Presiona enter para continuar','s');
             case 'e'
                 Valores = [Australia; Brazil; Canada; Chile; Indonesia; Japan; Mexico; SA; Spain; EUA];
