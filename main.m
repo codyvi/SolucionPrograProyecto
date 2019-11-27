@@ -155,9 +155,10 @@ function [] = main()
                 elseif(tmp2 == 2014)
                     disp('El promedio del 2014 es: ')
                     disp(Prom2014);
+                    input('Presiona enter para continuar', 's');
                 end
             case 'd'
-                disp('Caso D');
+                input('Presiona enter para continuar','s');
             case 'e'
                 disp('Caso E');
             case 'f'
