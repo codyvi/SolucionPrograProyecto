@@ -62,8 +62,8 @@ function [] = main()
     disp("c. Promedio de año de todos los paises");
     disp("d. Gráfica de años contra pais");
     disp("e. Promedio de todos los datos");
-    disp("f. ");
-    disp("g. ");
+    disp("f. Máx de los datos, país y año");
+    disp("g. Min de los datos, país y año");
     disp("h. ");
     disp("i. Salir");
     x = input('¿Que opción quieres? ', 's');
@@ -191,7 +191,102 @@ function [] = main()
                 disp(PromTods);
                 input('Presiona enter para continuar','s');
             case 'f'
-                disp('Caso F');
+                %Calculat maximo de todos los vectores y meter en un vector, de ahí sacar el maximo de ese vector 
+                MaxAus = max(Australia);
+                MaxBra = max(Brazil);
+                MaxCan = max(Canada);
+                MaxChi = max(Chile);
+                MaxInd = max(Indonesia);
+                MaxJap = max(Japan);
+                MaxMex = max(Mexico);
+                MaxSud = max(SA);
+                MaxSpa = max(Spain);
+                MaxEUA = max(EUA);
+
+                MaxVect = [MaxAus,MaxBra,MaxCan,MaxChi,MaxInd,MaxJap,MaxMex,MaxSud,MaxSpa,MaxEUA];
+                MaxVect = max(MaxVect);
+
+                if(MaxVect == MaxAus)
+                    Pais = 'Australia';
+                    for(i = 1 : 15)
+                        if(Australia(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxBra)
+                    Pais = 'Brazil';
+                    for(i = 1 : 15)
+                        if(Brazil(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxCan)
+                    Pais = 'Canada';
+                    for(i = 1 : 15)
+                        if(Canada(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxChi)
+                    Pais = 'Chile';
+                    for(i = 1 : 15)
+                        if(Chile(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxInd)
+                    Pais = 'Indonesia';
+                    for(i = 1 : 15)
+                        if(Indonesia(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxJap)
+                    Pais = 'Japan';
+                    for(i = 1 : 15)
+                        if(Japan(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxMex)
+                    Pais = 'Mexico';
+                    for(i = 1 : 15)
+                        if(Mexico(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxSud)
+                    Pais = 'Sudafrica';
+                    for(i = 1 : 15)
+                        if(Sudafrica(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxSpa)
+                    Pais = 'Spain';
+                    for(i = 1 : 15)
+                        if(Spain(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MaxVect == MaxEUA)
+                    Pais = 'EUA';
+                    for(i = 1 : 15)
+                        if(EUA(i) == MaxVect)
+                            Anio = i;
+                        end 
+                    end
+                end 
+
+                disp('El mayor valor es: ');
+                disp(MaxVect);
+                disp('El país es: ')
+                disp(Pais)
+                disp('El año es: ')
+                disp(Fechas(i));
+                input('Presiona enter para continuar','s');
+                
+
             case 'g'
                 disp('Caso G');
             case 'h'
@@ -204,8 +299,8 @@ function [] = main()
             disp("c. Promedio de año de todos los paises");
             disp("d. Gráfica de años contra pais");
             disp("e. Promedio de todos los datos");
-            disp("f. ");        
-            disp("g. ");
+            disp("f. Máx de los datos, país y año");
+            disp("g. Min de los datos, país y año");
             disp("h. ");
             disp("i. Salir");
             x = input('¿Que opción quieres?', 's');
