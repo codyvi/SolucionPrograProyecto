@@ -161,24 +161,34 @@ function [] = main()
             case 'd'
                 if(strcmp(tmp, 'Australia'))
                     plot(Fechas, Australia)
+                    grid on 
                 elseif(strcmp(tmp,'Brazil'))
                     plot(Fechas, Brazil)
+                    grid on
                 elseif(strcmp(tmp, 'Canada'))
                     plot(Fechas, Canada)
+                    grid on
                 elseif(strcmp(tmp, 'Chile'))
                     plot(Fechas, Chile)
+                    grid on
                 elseif(strcmp(tmp, 'Indonesia'))
                     plot(Fechas, Indonesia)
+                    grid on
                 elseif(strcmp(tmp, 'Japan'))
                     plot(Fechas, Japan)
+                    grid on
                 elseif(strcmp(tmp, 'Mexico'))
                     plot(Fechas, Mexico)
+                    grid on
                 elseif(strcmp(tmp,'Sudafrica'))
                     plot(Fechas, SA)
+                    grid on
                 elseif(strcmp(tmp, 'Spain'))
                     plot(Fechas, Spain)
+                    grid on
                 elseif(strcmp(tmp, 'EUA'))
                     plot(Fechas, EUA)
+                    grid on
                 end
                 input('Presiona enter para continuar','s');
             case 'e'
@@ -381,7 +391,29 @@ function [] = main()
                 input('Presiona enter para continuar','s');
 
             case 'h'
-                disp('Caso H');
+                figure(1)
+                plot(Fechas, Australia);
+                hold on 
+                plot(Fechas,Brazil);
+                hold on
+                plot(Fechas, Canada);
+                hold on 
+                plot(Fechas,Chile);
+                hold on
+                plot(Fechas, Indonesia);
+                hold on 
+                plot(Fechas,Japan);
+                hold on
+                plot(Fechas, Mexico);
+                hold on 
+                plot(Fechas,SA);
+                hold on
+                plot(Fechas, Spain);
+                hold on 
+                plot(Fechas,EUA);
+                legend('Australia', 'Brazil', 'Canada', 'Chile', 'Indonesia','Japan','Mexico','Sudafrica','Spain','EUA');
+                grid on
+                input('Presiona enter para continuar','s');
         end
             disp("Análisis del “GDP per capita - current US $ 2000 - 2015 ” para 10 países/ciudades");
             disp("Paises: Australia, Brazil, Canada, Chile, Indonesia, Japan, Mexico, Sudafrica, Spain, EUA")
