@@ -17,8 +17,39 @@ function [] = main()
     EUA = [36335, 37133, 38023, 39496, 41713, 44115, 46299, 47976, 48383, 47100, 48467, 49883, 51603, 53107, 55033];
 
     %Promedio de los años 
-    Datos2001 = [Australia(1), Brazil(1), Canada(1), Chile(1), Indonesia(1), Japan(1), Mexico(1), SA(1), Spain(1), EUA(1)];
+    Datos2000 = [Australia(1), Brazil(1), Canada(1), Chile(1), Indonesia(1), Japan(1), Mexico(1), SA(1), Spain(1), EUA(1)];
+    Datos2001 = [Australia(2), Brazil(2), Canada(2), Chile(2), Indonesia(2), Japan(2), Mexico(2), SA(2), Spain(2), EUA(2)];
+    Datos2002 = [Australia(3), Brazil(3), Canada(3), Chile(3), Indonesia(3), Japan(3), Mexico(3), SA(3), Spain(3), EUA(3)];
+    Datos2003 = [Australia(4), Brazil(4), Canada(4), Chile(4), Indonesia(4), Japan(4), Mexico(4), SA(4), Spain(4), EUA(4)];
+    Datos2004 = [Australia(5), Brazil(5), Canada(5), Chile(5), Indonesia(5), Japan(5), Mexico(5), SA(5), Spain(5), EUA(5)];
+    Datos2005 = [Australia(6), Brazil(6), Canada(6), Chile(6), Indonesia(6), Japan(6), Mexico(6), SA(6), Spain(6), EUA(6)];
+    Datos2006 = [Australia(7), Brazil(7), Canada(7), Chile(7), Indonesia(7), Japan(7), Mexico(7), SA(7), Spain(7), EUA(7)];
+    Datos2007 = [Australia(8), Brazil(8), Canada(8), Chile(8), Indonesia(8), Japan(8), Mexico(8), SA(8), Spain(8), EUA(8)];
+    Datos2008 = [Australia(9), Brazil(9), Canada(9), Chile(9), Indonesia(9), Japan(9), Mexico(9), SA(9), Spain(9), EUA(9)];
+    Datos2009 = [Australia(10), Brazil(10), Canada(10), Chile(10), Indonesia(10), Japan(10), Mexico(10), SA(10), Spain(10), EUA(10)];
+    Datos2010 = [Australia(11), Brazil(11), Canada(11), Chile(11), Indonesia(11), Japan(11), Mexico(11), SA(11), Spain(11), EUA(11)];
+    Datos2011 = [Australia(12), Brazil(12), Canada(12), Chile(12), Indonesia(12), Japan(12), Mexico(12), SA(12), Spain(12), EUA(12)];
+    Datos2012 = [Australia(13), Brazil(13), Canada(13), Chile(13), Indonesia(13), Japan(13), Mexico(13), SA(13), Spain(13), EUA(13)];
+    Datos2013 = [Australia(14), Brazil(14), Canada(14), Chile(14), Indonesia(14), Japan(14), Mexico(14), SA(14), Spain(14), EUA(14)];
+    Datos2014 = [Australia(15), Brazil(15), Canada(15), Chile(15), Indonesia(15), Japan(15), Mexico(15), SA(15), Spain(15), EUA(15)];
+
+    Prom2000 = mean(Datos2000);
     Prom2001 = mean(Datos2001);
+    Prom2002 = mean(Datos2002);
+    Prom2003 = mean(Datos2003);
+    Prom2004 = mean(Datos2004);
+    Prom2005 = mean(Datos2005);
+    Prom2006 = mean(Datos2006);
+    Prom2007 = mean(Datos2007);
+    Prom2008 = mean(Datos2008);
+    Prom2009 = mean(Datos2009);
+    Prom2010 = mean(Datos2010);
+    Prom2011 = mean(Datos2011);
+    Prom2012 = mean(Datos2012);
+    Prom2013 = mean(Datos2013);
+    Prom2014 = mean(Datos2014);
+
+
 
 
     disp("Análisis del “GDP per capita - current US $ 2000 - 2015 ” para 10 países/ciudades");
@@ -26,7 +57,7 @@ function [] = main()
     disp("a. Selecciona un País");
     disp("b. Max, Min y Prom de País");
     disp("c. Promedio de año de todos los paises");
-    disp("d. ");
+    disp("d. Gráfica de años contra pais");
     disp("e. ");
     disp("f. ");
     disp("g. ");
@@ -39,6 +70,7 @@ function [] = main()
                 tmp = input('Dame un país', 's');
                 disp('El país seleccionado es: ')
                 disp(tmp);
+                input('Presiona enter para continuar', 's')
             case 'b'
                 fileid = fopen('datos.txt', 'r');
                 disp(tmp);
@@ -46,7 +78,7 @@ function [] = main()
                 disp(tmp);
                 if(strcmp(tmp, 'Australia'))
                     aux = Australia;
-                elseif(strcmp(tmp,'Brazli'))
+                elseif(strcmp(tmp,'Brazil'))
                     aux = Brazil;
                 elseif(strcmp(tmp, 'Canada'))
                     aux = Canada;
@@ -75,8 +107,55 @@ function [] = main()
                 disp(Max);
                 disp("El menor valor es: ")
                 disp(Min);
+                input('Presiona enter para continuar', 's');
             case 'c'
-
+                tmp2 = input('Dame el año: ')
+                if(tmp2 == 2000)
+                    disp('El promedio del 2000 es: ')
+                    disp(Prom2000);
+                elseif(tmp2 == 2001)
+                    disp('El promedio del 2001 es: ')
+                    disp(Prom2001);
+                elseif(tmp2 == 2002)
+                    disp('El promedio del 2002 es: ')
+                    disp(Prom2002);
+                elseif(tmp2 == 2003)
+                    disp('El promedio del 2003 es: ')
+                    disp(Prom2003);
+                elseif(tmp2 == 2004)
+                    disp('El promedio del 2004 es: ')
+                    disp(Prom2004);
+                elseif(tmp2 == 2005)
+                    disp('El promedio del 2005 es: ')
+                    disp(Prom2005);
+                elseif(tmp2 == 2006)
+                    disp('El promedio del 2006 es: ')
+                    disp(Prom2006);
+                elseif(tmp2 == 2007)
+                    disp('El promedio del 2007 es: ')
+                    disp(Prom2007);
+                elseif(tmp2 == 2008)
+                    disp('El promedio del 2008 es: ')
+                    disp(Prom2008);
+                elseif(tmp2 == 2009)
+                    disp('El promedio del 2009 es: ')
+                    disp(Prom2009);
+                elseif(tmp2 == 2010)
+                    disp('El promedio del 2010 es: ')
+                    disp(Prom2010);
+                elseif(tmp2 == 2011)
+                    disp('El promedio del 2011 es: ')
+                    disp(Prom2011);
+                elseif(tmp2 == 2012)
+                    disp('El promedio del 2012 es: ')
+                    disp(Prom2012);
+                elseif(tmp2 == 2013)
+                    disp('El promedio del 2013 es: ')
+                    disp(Prom2013);
+                elseif(tmp2 == 2014)
+                    disp('El promedio del 2014 es: ')
+                    disp(Prom2014);
+                end
             case 'd'
                 disp('Caso D');
             case 'e'
@@ -93,7 +172,7 @@ function [] = main()
             disp("a. Selecciona un país");
             disp("b. Max, Min y Prom de País");
             disp("c. Promedio de año de todos los paises");
-            disp("d. ");
+            disp("d. Gráfica de años contra pais");
             disp("e. ");
             disp("f. ");        
             disp("g. ");
