@@ -53,8 +53,6 @@ function [] = main()
     Prom2014 = mean(Datos2014);
 
 
-
-
     disp("Análisis del “GDP per capita - current US $ 2000 - 2015 ” para 10 países/ciudades");
     disp("Paises: Australia, Brazil, Canada, Chile, Indonesia, Japan, Mexico, Sudafrica, Spain, EUA")
     disp("a. Selecciona un País");
@@ -64,7 +62,7 @@ function [] = main()
     disp("e. Promedio de todos los datos");
     disp("f. Máx de los datos, país y año");
     disp("g. Min de los datos, país y año");
-    disp("h. ");
+    disp("h. Gráfica de todos años contra todos los paises");
     disp("i. Salir");
     x = input('¿Que opción quieres? ', 's');
     while(x ~= 'i')
@@ -394,7 +392,7 @@ function [] = main()
             disp("e. Promedio de todos los datos");
             disp("f. Máx de los datos, país y año");
             disp("g. Min de los datos, país y año");
-            disp("h. ");
+            disp("h. Gráfica de todos años contra todos los paises");
             disp("i. Salir");
             x = input('¿Que opción quieres?', 's');
     end
