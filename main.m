@@ -16,6 +16,7 @@ function [] = main()
     Spain = [14667, 15324, 17020, 21496, 24919, 26511, 28483, 32709, 35579, 32334, 30737, 31835, 28564, 29212, 29212];
     EUA = [36335, 37133, 38023, 39496, 41713, 44115, 46299, 47976, 48383, 47100, 48467, 49883, 51603, 53107, 55033];
 
+
     %Promedio de los años 
     Datos2000 = [Australia(1), Brazil(1), Canada(1), Chile(1), Indonesia(1), Japan(1), Mexico(1), SA(1), Spain(1), EUA(1)];
     Datos2001 = [Australia(2), Brazil(2), Canada(2), Chile(2), Indonesia(2), Japan(2), Mexico(2), SA(2), Spain(2), EUA(2)];
@@ -58,7 +59,7 @@ function [] = main()
     disp("b. Max, Min y Prom de País");
     disp("c. Promedio de año de todos los paises");
     disp("d. Gráfica de años contra pais");
-    disp("e. ");
+    disp("e. Promedio de todos los datos");
     disp("f. ");
     disp("g. ");
     disp("h. ");
@@ -160,7 +161,12 @@ function [] = main()
             case 'd'
                 input('Presiona enter para continuar','s');
             case 'e'
-                disp('Caso E');
+                Valores = [Australia; Brazil; Canada; Chile; Indonesia; Japan; Mexico; SA; Spain; EUA];
+                M = mean(Valores)
+                PromTods = sum(M)/15;
+                disp('El promedio de todos los datos es: ');
+                disp(PromTods);
+                input('Presiona enter para continuar','s');
             case 'f'
                 disp('Caso F');
             case 'g'
@@ -174,7 +180,7 @@ function [] = main()
             disp("b. Max, Min y Prom de País");
             disp("c. Promedio de año de todos los paises");
             disp("d. Gráfica de años contra pais");
-            disp("e. ");
+            disp("e. Promedio de todos los datos");
             disp("f. ");        
             disp("g. ");
             disp("h. ");
