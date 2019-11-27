@@ -283,12 +283,105 @@ function [] = main()
                 disp('El país es: ')
                 disp(Pais)
                 disp('El año es: ')
-                disp(Fechas(i));
+                disp(Fechas(Anio));
                 input('Presiona enter para continuar','s');
                 
 
             case 'g'
-                disp('Caso G');
+                MinAus = min(Australia);
+                MinBra = min(Brazil);
+                MinCan = min(Canada);
+                MinChi = min(Chile);
+                MinInd = min(Indonesia);
+                MinJap = min(Japan);
+                MinMex = min(Mexico);
+                MinSud = min(SA);
+                MinSpa = min(Spain);
+                MinEUA = min(EUA);
+
+                MinVect = [MinAus,MinBra,MinCan,MinChi,MinInd,MinJap,MinMex,MinSud,MinSpa,MinEUA];
+                MinVect = min(MinVect);
+
+                if(MinVect == MinAus)
+                    Pais = 'Australia';
+                    for(i = 1 : 15)
+                        if(Australia(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinBra)
+                    Pais = 'Brazil';
+                    for(i = 1 : 15)
+                        if(Brazil(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinCan)
+                    Pais = 'Canada';
+                    for(i = 1 : 15)
+                        if(Canada(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinChi)
+                    Pais = 'Chile';
+                    for(i = 1 : 15)
+                        if(Chile(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinInd)
+                    Pais = 'Indonesia';
+                    for(i = 1 : 15)
+                        if(Indonesia(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinJap)
+                    Pais = 'Japan';
+                    for(i = 1 : 15)
+                        if(Japan(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinMex)
+                    Pais = 'Mexico';
+                    for(i = 1 : 15)
+                        if(Mexico(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinSud)
+                    Pais = 'Sudafrica';
+                    for(i = 1 : 15)
+                        if(Sudafrica(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinSpa)
+                    Pais = 'Spain';
+                    for(i = 1 : 15)
+                        if(Spain(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                elseif(MinVect == MinEUA)
+                    Pais = 'EUA';
+                    for(i = 1 : 15)
+                        if(EUA(i) == MinVect)
+                            Anio = i;
+                        end 
+                    end
+                end 
+
+                disp('El mayor valor es: ');
+                disp(MinVect);
+                disp('El país es: ')
+                disp(Pais)
+                disp('El año es: ')
+                disp(Fechas(Anio));
+                input('Presiona enter para continuar','s');
+
             case 'h'
                 disp('Caso H');
         end
